@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   
+    <meta charset="UTF-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Binário para Decimal</title>
+
+
+    <script>
+     
+        function converterParaDecimal() {
+          
+            var binario = document.getElementById("numero").value;
+
+           
+            if (binario == "") {
+          
+                alert("Por favor, insira um número binário.");
+                return;
+            }
+
+           
+            var regexBinario = /^[01]+$/;
+            if (!regexBinario.test(binario)) {
+                alert("Por favor, insira um número binário válido (apenas 0's e 1's).");
+                return;
+            }
+
+            
+            var decimal = parseInt(binario, 2);
+
+           
+            document.getElementById("resultado").innerText = decimal;
+        }
+    </script>
+
+</head>
+<body>
+
+   
+    <h1>CONVERSOR DE BINÁRIO PARA DECIMAL</h1>
+    <hr>
+    <br>
+    
+   
+    <p>Digite um número binário para converter para decimal:</p>
+    
+   
+    <input type="text" id="numero" placeholder="Digite um número binário">
+    
+  
+    <button onclick="converterParaDecimal()">Converter</button>
+
+    
+    <p id="resultado"></p>
+
+</body>
+</html>
