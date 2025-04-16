@@ -1,2 +1,2 @@
-| First header | Second Header |
-| ------------ | ------------- |
+|--------------| Android | Microsoft Windows | Mac OS | IOS | Linux |
+| ------------ | ------- | ----------------- | ------ | --- | ------| 
