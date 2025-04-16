@@ -1,2 +1,2 @@
 # Cyberguard <h1>
-![](https://imgur.com/a/FtPSpfQ)
+![.](https://imgur.com/a/FtPSpfQ)
