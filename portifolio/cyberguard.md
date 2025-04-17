@@ -1,3 +1,3 @@
 # Cyberguard <h1>
-![](https://drive.google.com/file/d/14EOMyX2QJnbHWOIFEvac0kCZTgGl6hsy/view?usp=drivesdk)
+![a](Armazenamento interno/Download/IMG_20250416_105128.jpg)
 A CYBERGUARD é uma empresa que tem
