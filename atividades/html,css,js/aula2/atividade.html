@@ -13,4 +13,53 @@
   <input type="text" id="cupom" placeholder="Digite o cupom.">
   <br><br><button onclick="verificarCupom()" id="botaoVerificar">Verificar</button>
 </body>
+<script>
+    function verificarCupom() {
+    const cupomValido = "2345meia78";
+    const campo = document.getElementById("cupom");
+    const valorDigitado = campo.value;
+
+    const titulo = document.getElementById("titulo");
+    const mensagem = document.getElementById("mensagem");
+    const botao = document.getElementById("botaoVerificar");
+
+    if (valorDigitado == cupomValido) {
+        titulo.innerHTML = "Cupom Válido!";
+        mensagem.innerHTML = "Parabéns! Você ganhou um desconto.";
+        botao.innerHTML = "Cupom Aplicado";
+    } else {
+        titulo.innerHTML = "Cupom Inválido!";
+        mensagem.innerHTML = "Tente novamente com um cupom correto.";
+        botao.innerHTML = "Verificar";
+    }
+}
+
+</script>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    color: blanchedalmond;
+    background-color: black;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 10px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    background-color: red;
+} 
+</style>
 </html>
