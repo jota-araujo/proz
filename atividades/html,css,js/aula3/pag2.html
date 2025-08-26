@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos</title>
+</head>
+
+
+<body>
+    <h1>Bem-Vindo a nossa pagina de cursos</h1>
+    <p>Aqui você encontra os melhores cursos para se especializar na sua área.</p>
+    <div class="container">
+        <button id="botão1" onclick="cursojs()">Curso de JavaScript</button>
+        <br><br>
+        <button id="botão2" onclick="cursohtml()">Curso de HTML e CSS</button>
+        <br><br>
+        <button id="botão3" onclick="cursoPython()">Curso de Python</button>
+        <br><br>
+        <button id="botão4" onclick="cursoJava()">Curso de Java</button>
+        <br><br>
+        <button id="botão5" onclick="CursoDesenvolvimentoWeb()">Curso Desenvolvimento Web</button>
+</body>
+<script>
+    function cursojs() {
+        window.location.href = "https://www.cursoemvideo.com/curso/javascript/";
+    }
+
+    function cursohtml() {
+        window.location.href = "https://www.cursoemvideo.com/curso/html5/";
+    }
+
+    function cursoPython() {
+        window.location.href = "https://www.cursoemvideo.com/curso/python-3-mundo-1/";
+    }
+
+    function cursoJava() {
+        window.location.href = "https: //www.cursoemvideo.com/curso/java-basico/";
+    }
+
+    function CursoDesenvolvimentoWeb() {
+        window.location.href = "https://www.cursoemvideo.com/curso/python-3-mundo-1/";
+    }
+</script>
+<style>
+    /* Reset básico */
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    /* Corpo da página */
+    
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f1f1f1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 20px;
+    }
+    /* Centralizar conteúdo */
+    
+    h1,
+    p {
+        text-align: center;
+    }
+    /* Título */
+    
+    h1 {
+        color: #333;
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    /* Parágrafo */
+    
+    p {
+        color: #555;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    /* Container de botões */
+    
+    .container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+    }
+    /* Botões */
+    
+    button {
+        background-color: #008cff;
+        color: #fff;
+        border: none;
+        padding: 12px 20px;
+        margin: 10px 0;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 100%;
+    }
+    /* Efeito de hover nos botões */
+    
+    button:hover {
+        background-color: #0077cc;
+    }
+</style>
+
+</div>
+
+</html>
