@@ -1,73 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de login</title>
 </head>
-<div class="container">
+
+
 <body>
-    <h1 id="titulo">LOGIN</h1>
-    <p id="mensagem">Digite usuário e senha para realizar login.</p>
-    <input type="text" id="usuário" placeholder="Digite o seu usuário">
-    <br><br>
-    <input type="password" id="senha" placeholder="Digite a sua senha">
-    <br><br>
-    <button id="botão" onclick="verificarUsuario()">Verificar</button>
+    <div class="container">
+        <h1 id="titulo">LOGIN</h1>
+        <p id="mensagem">Digite usuário e senha para realizar login.</p>
+        <input type="text" id="usuário" placeholder="Digite o seu usuário">
+        <br><br>
+        <input type="password" id="senha" placeholder="Digite a sua senha">
+        <br><br>
+        <button id="botão" onclick="verificarUsuario()">Verificar</button>
 
-<script>
-function verificarUsuario() {
-    const usuarios = ["joão", "Matheus", "Kauan"];
-    const senhas = ["1234", "5678", "9012"];
-    const inputUsuario = document.getElementById("usuário").value;
-    const inputSenha = document.getElementById("senha").value;
-    let encontrado = false;
+        <script>
+            function verificarUsuario() {
+                const usuarios = ["joão", "Matheus", "Kauan"];
+                const senhas = ["1234", "5678", "9012"];
+                const inputUsuario = document.getElementById("usuário").value;
+                const inputSenha = document.getElementById("senha").value;
+                let encontrado = false;
 
-    for (let i = 0; i < usuarios.length; i++) {
-        if (inputUsuario === usuarios[i] && inputSenha === senhas[i]) {
-            encontrado = true;
-            document.getElementById("mensagem").innerHTML = "Login bem-sucedido!";
-            break;
-        }
-    }
+                for (let i = 0; i < usuarios.length; i++) {
+                    if (inputUsuario === usuarios[i] && inputSenha === senhas[i]) {
+                        encontrado = true;
+                        document.getElementById("mensagem").innerHTML = "Login bem-sucedido!";
+                        document.getElementById("botão").textContent = "Redirecionando...";
+                        window.location.href = "pag2.html";
+                        break;
+                    }
+                }
 
-    if (!encontrado) {
-        document.getElementById("mensagem").innerHTML = "Usuário ou senha incorretos.";
-    }
-}
-</script>
-<style>
-.container {
-    margin: 0 auto;
-    width: 200px;
-    text-align: center;
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    }
-body {
-        margin-top: 100px;
-        background-color: #dcdcdc;
-        text-align: center;
-    }
-input{
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box; /* garante que o padding não ultrapasse a largura */
-}
-button {
-    background-color: #008cff;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-</style>
+                if (!encontrado) {
+                    document.getElementById("mensagem").innerHTML = "Usuário ou senha incorretos.";
+                }
+                setTimeout(() => {
+                    document.getElementById("mensagem").innerHTML = "Digite usuário e senha para realizar login.";
+                }, 5000);
+                document.getElementById("usuário").value = "";
+                document.getElementById("senha").value = "";
+            }
+        </script>
+        <style>
+            .container {
+                margin: 0 auto;
+                width: 200px;
+                text-align: center;
+                background-color: white;
+                padding: 30px;
+                border-radius: 10px;
+            }
+            
+            body {
+                margin-top: 100px;
+                background-color: #dcdcdc;
+                text-align: center;
+            }
+            
+            input {
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 16px;
+                width: 100%;
+                box-sizing: border-box;
+                /* garante que o padding não ultrapasse a largura */
+            }
+            
+            button {
+                background-color: #008cff;
+                color: white;
+                border: none;
+                padding: 10px;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        </style>
 </body>
 </div>
+
 </html>
