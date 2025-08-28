@@ -10,6 +10,7 @@
 
 <body>
     <div class="container">
+     <div class="estrela">⭐</div>
         <h1 id="titulo">LOGIN</h1>
         <p id="mensagem">Digite usuário e senha para realizar login.</p>
         <input type="text" id="usuário" placeholder="Digite o seu usuário">
@@ -31,7 +32,7 @@
                         encontrado = true;
                         document.getElementById("mensagem").innerHTML = "Login bem-sucedido!";
                         document.getElementById("botão").textContent = "Redirecionando...";
-                        window.location.href = "pag2.html";
+                        window.location.href = "pag3.html";
                         break;
                     }
                 }
@@ -47,40 +48,54 @@
             }
         </script>
         <style>
-            .container {
-                margin: 0 auto;
-                width: 200px;
-                text-align: center;
-                background-color: white;
-                padding: 30px;
-                border-radius: 10px;
-            }
-            
-            body {
-                margin-top: 100px;
-                background-color: #dcdcdc;
-                text-align: center;
-            }
-            
-            input {
-                padding: 10px;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-                font-size: 16px;
-                width: 100%;
-                box-sizing: border-box;
-                /* garante que o padding não ultrapasse a largura */
-            }
-            
-            button {
-                background-color: #008cff;
-                color: white;
-                border: none;
-                padding: 10px;
-                border-radius: 5px;
-                font-size: 16px;
-                cursor: pointer;
-            }
+body {
+    margin-top: 100px;
+    background-color: #1a1a1a; /* fundo escuro elegante */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.container {
+    margin: 0 auto;
+    width: 250px;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #000000;
+    border: 2px solid #000000;
+}
+
+
+input {
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #000000; /* preto padrão do Galo */
+    color: #ffffff;
+    border: 2px solid #f1c40f; /* amarelo-dourado sutil, lembrando detalhes do escudo */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #222222;
+    transform: scale(1.05);
+}
+
         </style>
 </body>
 </div>
