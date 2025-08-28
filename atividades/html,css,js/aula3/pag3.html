@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>cursos</title>
+</head>
+<body>
+ <header>
+ <h1>Bem-Vindo a nossa página de Títulos</h1>
+ <p>Aqui você encontra todos os títulos do Clube Atletico Mineiro</p>
+ </header>
+ <ul>
+  <li onclick='carregando(cbd)'>Copa do Brasil</li>
+  <li onclick='carregando(cl)'>Copa Libertadores da América</li>
+  <li onclick='carregando(cm)'>CAMpeonato Mineiro</li>
+  <li onclick='carregando(cb)'>CAMpeonato Brasileiro</li>
+  <li onclick='carregando(cbb)'>CAMpeonato Brasileiro Série B </li>
+  <li onclick='carregando(sc)'>Supercopa do Brasil</li>
+  <li onclick='carregando(cc)'>Copa CONMEBOL</li>
+  <li onclick='carregando(rsl)'>Recopa Sul-Americana</li>
+  <li onclick='carregando(ccb)'>Copa dos CAMpeões do Brasil</li>
+ </ul>
+ <div id="detalhes"></div>
+ <footer>
+  Clube Atlético Mineiro © 2025 - Todos os direitos reservados.
+  <P>Av. Olegário Maciel, 1516 - Lourdes
+Belo Horizonte - MG, 30180-111</P>
+ <a href="https://www.instagram.com/atletico/">Instagram</a>
+ </footer>
+<script>
+  // Função assíncrona para carregar detalhes do título
+  async function carregando(titulo) {
+    try {
+      // Mostra mensagem de carregamento
+      document.getElementById("detalhes").innerHTML = "Carregando informações do título...";
+
+      // Espera 2 segundos simulando carregamento
+      await new Promise(resolve => setTimeout(resolve, 2000));
+
+      // Objeto com detalhes de cada título
+      let mensagens = {
+        cbd: "A Copa do Brasil foi conquistada pelo Atlético em 2014, com uma campanha histórica.",
+        cl: "A inesquecível campanha da Libertadores de 2013 marcou para sempre a história do Galo. Liderado por Ronaldinho Gaúcho e com defesas milagrosas de Victor, o Atlético superou gigantes sul-americanos e venceu o Olimpia nos pênaltis, no Mineirão lotado, conquistando a América pela primeira vez",
+        cm: "Com dezenas de títulos estaduais, o Atlético Mineiro é o maior campeão do Campeonato Mineiro. Suas conquistas representam a supremacia regional e o domínio absoluto no futebol de Minas Gerais, embalado pela paixão inigualável da torcida.",
+        cb: "O Atlético fez história ao conquistar o primeiro Campeonato Brasileiro da era moderna em 1971. Cinco décadas depois, em 2021, o Galo voltou ao topo com uma campanha brilhante, comandada por Hulk e Nacho, reafirmando sua grandeza nacional com o bicampeonato.",
+        cbb: "Em 2006, o Atlético enfrentou um dos maiores desafios de sua história. Com o apoio incondicional da torcida, o Galo venceu a Série B com garra e determinação, retornando à elite do futebol brasileiro de cabeça erguida e espírito renovado.",
+        sc: "Após um 2021 glorioso, o Galo conquistou a Supercopa do Brasil em 2022 em um jogo emocionante contra o Flamengo. Após um empate eletrizante, a decisão foi para os pênaltis, onde o Atlético brilhou e levantou mais um troféu nacional.",
+        cc: "A Copa CONMEBOL foi conquistada em 1997, sendo o primeiro título internacional do Galo.",
+        rsl: "Após vencer a Libertadores em 2013, o Galo disputou e venceu a Recopa Sul-Americana em 2014 contra o Lanús, da Argentina. Em dois jogos intensos, o Atlético mostrou força e habilidade para levantar mais um troféu internacional.",
+        ccb: "Reconhecida oficialmente pela CBF, a conquista da Copa dos Campeões de 1937 consagrou o Atlético como o primeiro campeão nacional da história do Brasil. Um feito histórico que reforça a tradição centenária e o pioneirismo do Galo."
+      };
+
+      // Atualiza o conteúdo com a mensagem correta
+      document.getElementById("detalhes").innerHTML = mensagens[titulo];
+    } catch (erro) {
+      // Mostra mensagem de erro, se houver
+      document.getElementById("detalhes").innerHTML = "Erro: " + erro.message;
+    }
+  }
+
+  // Declaração das variáveis para cada título
+  const cbd = 'cbd';
+  const cl = 'cl';
+  const cm = 'cm';
+  const cb = 'cb';
+  const cbb = 'cbb';
+  const sc = 'sc';
+  const cc = 'cc';
+  const rsl = 'rsl';
+  const ccb = 'ccb';
+</script>
+<style>
+  /* Estilo geral da página */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* preto */
+    color: #fff; /* texto branco */
+  }
+
+  /* Cabeçalho */
+  header {
+    background-color: #111; /* cinza escuro */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #FFD700; /* dourado */
+  }
+
+  header h1 {
+    font-size: 32px;
+    margin: 0;
+    color: #FFD700; /* dourado */
+  }
+
+  header p {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  /* Lista de títulos */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 600px;
+  }
+
+  ul li {
+    background-color: #222; /* fundo cinza escuro */
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    border: 1px solid #444;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  ul li:hover {
+    background-color: #FFD700; /* dourado ao passar o mouse */
+    color: #000; /* texto preto ao passar o mouse */
+  }
+
+  /* Área de detalhes */
+  #detalhes {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #111;
+    border-left: 5px solid #FFD700;
+    font-size: 18px;
+    line-height: 1.6;
+    border-radius: 5px;
+  }
+
+  /* Rodapé */
+  footer {
+    background-color: #111;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    border-top: 2px solid #FFD700;
+    margin-top: 50px;
+  }
+
+  footer p {
+    margin: 10px 0;
+  }
+
+  footer a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+</html>
