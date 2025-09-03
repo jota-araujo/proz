@@ -10,6 +10,7 @@
  <h1>Bem-Vindo a nossa página de Títulos</h1>
  <p>Aqui você encontra todos os títulos do Clube Atletico Mineiro</p>
  </header>
+ <button id="botão" onclick="voltar()">voltar</button>
  <ul>
   <li onclick='carregando(cbd)'>Copa do Brasil</li>
   <li onclick='carregando(cl)'>Copa Libertadores da América</li>
@@ -29,6 +30,9 @@ Belo Horizonte - MG, 30180-111</P>
  <a href="https://www.instagram.com/atletico/">Instagram</a>
  </footer>
 <script>
+  function voltar(){
+    window.location.href = "trabalho.html";
+  }
   // Função assíncrona para carregar detalhes do título
   async function carregando(titulo) {
     try {
@@ -77,6 +81,23 @@ Belo Horizonte - MG, 30180-111</P>
     font-family: Arial, sans-serif;
     background-color: #000; /* preto */
     color: #fff; /* texto branco */
+  }
+  /* Botão */
+button {
+  color: #fff;
+  background-color: #444;
+  padding: 15px 25px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+  button:hover {
+     background-color: #FFD700; /* dourado ao passar o mouse */
+    color: #000; /* texto preto ao passar o mouse */
   }
 
   /* Cabeçalho */
