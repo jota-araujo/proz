@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>viajar_mais</title>
+</head>
+<body>
+
+  <header>
+    Viajar Mais!
+    <img src="imagens/aviao.png"  style="width: 150px; height: 150px; vertical-align: middle;">
+  
+  </header>
+<ul>
+  <li onclick="destino('sal')">
+    <div class="pacote">
+      <img src="imagens/salvador.jpg" alt="Salvador">
+      <h2>Salvador-BA</h2>
+    </div>
+  </li>
+  <li onclick="destino('na')">
+    <div class="pacote">
+      <img src="imagens/natal.jpg" alt="Natal">
+      <h2>Natal-RN</h2>
+    </div>
+  </li>
+  <li onclick="destino('san')">
+    <div class="pacote">
+      <img src="imagens/santiago.jpg" alt="Santiago">
+      <h2>Santiago-Chile</h2>
+    </div>
+  </li>
+  <li onclick="destino('ba')">
+    <div class="pacote">
+      <img src="imagens/buenos_aires.jpg" alt="Buenos Aires">
+      <h2>Buenos Aires-Argentina</h2>
+    </div>
+  </li>
+  <li onclick="destino('ass')">
+    <div class="pacote">
+      <img src="imagens/assunção.png" alt="Assunção">
+      <h2>Assunção-Paraguai</h2>
+    </div>
+  </li>
+  <li onclick="destino('op')">
+    <div class="pacote">
+      <img src="imagens/ouro_preto.jpg" alt="Ouro Preto">
+      <h2>Ouro Preto-MG</h2>
+    </div>
+  </li>
+  <li onclick="destino('par')">
+    <div class="pacote">
+      <img src="imagens/paraty.jpg" alt="Paraty">
+      <h2>Paraty-RJ</h2>
+    </div>
+  </li>
+  <li onclick="destino('gra')">
+    <div class="pacote">
+      <img src="imagens/gramado.jpg" alt="Gramado">
+      <h2>Gramado-RS</h2>
+    </div>
+  </li>
+</ul>
+
+
+<div id="detalhes"></div>
+<footer>
+  Contato: (31) 0234-5678 <br>
+  <br> <div>
+    <a href="https://www.facebook.com" target="_blank">
+      <img src="imagens/facebook.png" alt="Facebook" style="width: 40px; height: 40px;">
+    </a>
+    <a href="https://www.instagram.com" target="_blank">
+      <img src="imagens/instagram.png" alt="Instagram" style="width: 40px; height: 40px;">
+    </a>
+    <a href="https://www.twitter.com" target="_blank">
+      <img src="imagens/twitter.png" alt="Twitter" style="width: 40px; height: 40px;">
+    </a>
+  </div>
+<br>  &copy;2025 Viajar Mais. Todos os direitos reservados.
+</footer>
+
+<script>
+ 
+    async function destino(viagem){
+          try {
+      // Mostra mensagem de carregamento
+      document.getElementById("detalhes").innerHTML = "Carregando informações do destino...";
+
+      // Espera 2 segundos simulando carregamento
+      await new Promise(resolve => setTimeout(resolve, 2000));
+          
+    let mensagens = {
+        'sal': "Berço da cultura afro-brasileira, Salvador encanta com seu centro histórico vibrante, praias paradisíacas e festas populares únicas. A mistura de cores, sabores e ritmos torna a capital baiana um destino inesquecível.",
+        'na': "Com dunas imensas, mar cristalino e sol o ano inteiro, Natal é um paraíso para quem busca natureza e tranquilidade. O famoso passeio de buggy pelas dunas de Genipabu é imperdível.",
+        'san': "Moderna e cercada pela imponente Cordilheira dos Andes, Santiago combina cultura, gastronomia e paisagens de tirar o fôlego. É o ponto de partida ideal para explorar vinícolas e estações de esqui chilenas.",
+        'ba': "Charmosa e cheia de personalidade, Buenos Aires mistura ares europeus com alma latina. Caminhar por seus bairros icônicos, saborear um bom vinho e assistir a um show de tango são experiências obrigatórias.",
+        'ass': "Com seu ritmo tranquilo e povo acolhedor, Assunção surpreende pela rica história, arquitetura colonial e mercados vibrantes. Uma capital pouco explorada, mas cheia de autenticidade.",
+        'op': "Rica em história, cultura e arquitetura colonial, Ouro Preto é um dos destinos mais emblemáticos do Brasil. Localizada nas montanhas de Minas Gerais, a cidade encanta com suas ladeiras de pedra, igrejas barrocas e museus que contam os capítulos da Inconfidência Mineira. Um verdadeiro mergulho no passado, com charme e beleza que atravessam os séculos.",
+        'par': "Paraty é um tesouro entre o mar e a serra. Suas ruas de pedra e construções coloniais preservadas convidam a uma viagem no tempo, enquanto suas praias, cachoeiras e trilhas pela Mata Atlântica encantam os amantes da natureza. O centro histórico vibrante, com arte, cultura e gastronomia, faz de Paraty um destino completo para todos os gostos.",
+        'gra': "Com influência europeia evidente na arquitetura e na gastronomia, Gramado é uma das cidades mais charmosas da Serra Gaúcha. Destino perfeito em qualquer estação, oferece atrações como o Natal Luz, o Festival de Cinema e diversas opções de lazer para toda a família. Entre chocolates, vinhos e paisagens encantadoras, Gramado é um convite ao encantamento."
+    }
+          document.getElementById("detalhes").innerHTML = mensagens[viagem];
+    } catch (erro) {
+      // Mostra mensagem de erro, se houver
+      document.getElementById("detalhes").innerHTML = "Erro: " + erro.message;
+    }}
+  
+</script>
+<style>
+  /* Reset e base */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #fff;
+    color: #003366;
+    line-height: 1.5;
+  }
+
+  /* Cabeçalho com hero clean e destaque */
+  header {
+    background-color: #003366;
+    color: #ffd700;
+    padding: 60px 20px;
+    text-align: center;
+    position: middle;
+    font-size: 90px;
+    font-family:cursive;
+
+  }
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  header p {
+    font-size: 1.2rem;
+    color: #bfa2db;
+  }
+
+  .hero-cta {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #ffd700;
+    color: #003366;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  .hero-cta:hover {
+    background-color: #fff;
+  }
+
+  /* Lista de destinos (cards) */
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;  /* Permite que os itens se ajustem na linha */
+    justify-content: center;  /* Alinha os itens igualmente na tela */
+    gap: 20px;  /* Aumenta o espaço entre os cards */
+    padding: 40px 10px;
+    margin: 0 auto;
+    width: 100%; /* Garantir que a lista ocupe toda a largura disponível */
+  }
+
+  ul li {
+    position: relative;
+    background-color: #fff; /* Remover o fundo branco do card */
+    border: none; /* Remover a borda roxa */
+    border-radius: 8px;
+    width: 260px;  /* Largura fixa para todos os cards */
+    height: 260px;  /* Definindo altura fixa para todos os cards */
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    box-sizing: border-box; /* Garante que a largura e o padding não se sobreponham */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Garante que o conteúdo se distribua corretamente */
+  }
+
+  ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  ul li h2 {
+    color: #003366;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  /* Estilizando a estrutura do pacote */
+  .pacote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+    border: none; /* Remover borda */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 260px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.3s;
+  }
+
+  .pacote img {
+    width: 100%;
+    height: 180px; /* Altura fixa para todas as imagens */
+    object-fit: cover; /* Assegura que a imagem preencha bem o card sem distorção */
+  }
+
+  .pacote h2 {
+    font-size: 1.2rem;
+    color: #003366;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+
+  /* Detalhes ocultos inicialmente */
+  .imagem-hover {
+    display: none;
+  }
+
+  ul li:hover .imagem-hover {
+    display: flex; /* Faz a imagem aparecer ao passar o mouse */
+  }
+
+  /* Detalhes com borda lateral sutil */
+  #detalhes {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-left: 5px solid #ffd700;
+    border-radius: 5px;
+    color: #003366;
+    font-size: 1rem;
+  }
+
+  #detalhes h3 {
+    margin-bottom: 10px;
+    color: #7f3fbf;
+  }
+
+  /* Rodapé clean com alinhamento central */
+  footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 25px 10px;
+    margin-top: 40px;
+  }
+
+  footer a {
+    color: #ffd700;
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    color: #bfa2db;
+  }
+</style>
+</html>
