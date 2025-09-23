@@ -1,68 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Troca de cor por horário</title>
 </head>
+
 <body>
     <div class="container">
-    <h1 id="Titulo"></h1>
-    <p id="hora"></p>
-    <p id="data"></p>
-    <p id="frase"></p>
-    <p id="diaSemana"></p>
+        <h1 id="Titulo"></h1>
+        <p id="hora"></p>
+        <p id="data"></p>
+        <p id="diaSemana"></p>
+        <p id="frase"></p>
+
     </div>
 </body>
 <script>
     function mudarCor() {
         let imgFundo;
         let mensagem;
+        let diaTipo;
         const agora = new Date();
         const hora = agora.getHours();
         const minutos = agora.getMinutes().toString().padStart(2, "0");
         const segundos = agora.getSeconds().toString().padStart(2, "0");
         const dia = agora.getDay();
-        const opcoes = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+        const opcoes = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         const dataFormatada = agora.toLocaleDateString("pt-BR", opcoes);
 
 
+        if (dia >= 1 && dia <= 5) { // Segunda a sexta-feira
+            diaTipo = "💼 Dia útil. Foque no trabalho! ";
+        } else { // Sábado e domingo
+            diaTipo = "🛌 Final de semana. Dia de descansar!";
+        }
+        document.getElementById("diaSemana").innerText = diaTipo;
+
         if (hora >= 6 && hora < 12) {
             imgFundo = 'imagens/manha.jpg';
-            mensagem = "Bom dia! ☀️"; 
+            mensagem = "Bom dia! ☀️";
             frases = [
-            "Acorde com determinação, vá dormir com satisfação.",
-            "Cada manhã é uma nova oportunidade para ser melhor.",
-            "O sucesso começa com um bom dia."
+                "Acorde com determinação, vá dormir com satisfação.",
+                "Cada manhã é uma nova oportunidade para ser melhor.",
+                "O sucesso começa com um bom dia."
             ];
-        } else if (hora>= 12 && hora < 18) {
+        } else if (hora >= 12 && hora < 18) {
             imgFundo = 'imagens/tarde.jpg';
-            mensagem = "Boa tarde! ⛅"; 
+            mensagem = "Boa tarde! ⛅";
             frases = [
                 "A tarde é o momento perfeito para recarregar as energias.",
-                "Aproveite cada instante desta tarde maravilhosa.", 
+                "Aproveite cada instante desta tarde maravilhosa.",
                 "Que sua tarde seja tão brilhante quanto o sol."
             ];
         } else if (hora >= 18 && hora < 21) {
-            imgFundo = 'imagens/noite.jpg'; 
-            mensagem = "Boa noite! 💤"; 
+            imgFundo = 'imagens/noite.jpg';
+            mensagem = "Boa noite! 💤";
             frases = [
-                "A noite é para sonhar e planejar o amanhã.", 
-                "Que sua noite seja tranquila e revigorante.", 
+                "A noite é para sonhar e planejar o amanhã.",
+                "Que sua noite seja tranquila e revigorante.",
                 "Durma com sonhos e acorde com conquistas."
             ];
         } else {
             imgFundo = 'imagens/madrugada.jpg';
             mensagem = "Vai dormir vc é corno não morcego!";
             frases = [
-                "A madrugada é o momento de reflexão e paz.", 
-                "Que a serenidade da noite te envolva.", 
+                "A madrugada é o momento de reflexão e paz.",
+                "Que a serenidade da noite te envolva.",
                 "Aproveite a calma da madrugada para sonhar."
-            ]; 
-        }   
-        document.body.style.backgroundImage = "url('" + imgFundo + "')";
-        document.body.style.backgroundSize = "cover";
-        document.body.style.backgroundPosition = "center";
+            ];
+        }
+        document.body.style.backgroundImage = "url('" + imgFundo + "')";;
         document.getElementById("Titulo").innerText = mensagem;
         document.getElementById("data").innerText = "🗓️ " + dataFormatada;
         document.getElementById("hora").innerText = "⏳" + hora + ":" + minutos + ":" + segundos;
@@ -84,26 +93,46 @@
 </script>
 <style>
     body {
-        text-align: center;
+        margin: 0;
+        height: 100vh;
+        /*Ocupa toda a altura da tela*/
+        display: flex;
+        /*ativa flexbox*/
+        justify-content: center;
+        /*centraliza verticalmente*/
+        align-items: center;
+        /*centraliza horizontalmente*/
         font-family: cursive;
-        color:black;
-        padding-top: 150px;}
-    .container {
-        background-color: rgba(255, 255, 255, 0.8);
-        display: inline-block;
-        padding: 50px 40px;
-        border-radius: 10px;
-        
+        background-size: cover;
+        /*imagem ocupa toda a tela*/
+        background-position: center;
+        background-repeat: no-repeat;
+        /*impede a repetição da imagem*/
     }
-    @media (max-width: 768px) {
-        body {
-            padding-top: 50px;
-            font-size: 35px;
+
+    .container {
+        background-color: rgba(221, 219, 210, 0.8);
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+        max-width: 400px;
+        border-radius: 10px;
+
+    }
+
+    @media (max-width: 400px) {
+        h1 {
+            font-size: 22px;
         }
-        button {
+
+        p {
             font-size: 14px;
-            padding-top: 16px;
+        }
+
+        .container {
+            width: 70%;
         }
     }
 </style>
+
 </html>
