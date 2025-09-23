@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca de cor por horário</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="Titulo"></h1>
+        <p id="hora"></p>
+        <p id="data"></p>
+        <p id="diaSemana"></p>
+        <p id="frase"></p>
+
+    </div>
+</body>
+<script>
+    function mudarCor() {
+        let imgFundo;
+        let mensagem;
+        let diaTipo;
+        const agora = new Date();
+        const hora = agora.getHours();
+        const minutos = agora.getMinutes().toString().padStart(2, "0");
+        const segundos = agora.getSeconds().toString().padStart(2, "0");
+        const dia = agora.getDay();
+        const opcoes = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const dataFormatada = agora.toLocaleDateString("pt-BR", opcoes);
+
+
+        if (dia >= 1 && dia <= 5) { // Segunda a sexta-feira
+            diaTipo = "💼 Dia útil. Foque no trabalho! ";
+        } else { // Sábado e domingo
+            diaTipo = "🛌 Final de semana. Dia de descansar!";
+        }
+        document.getElementById("diaSemana").innerText = diaTipo;
+
+        if (hora >= 6 && hora < 12) {
+            imgFundo = 'imagens/manha.jpg';
+            mensagem = "Bom dia! ☀️";
+            frases = [
+                "Acorde com determinação, vá dormir com satisfação.",
+                "Cada manhã é uma nova oportunidade para ser melhor.",
+                "O sucesso começa com um bom dia."
+            ];
+        } else if (hora >= 12 && hora < 18) {
+            imgFundo = 'imagens/tarde.jpg';
+            mensagem = "Boa tarde! ⛅";
+            frases = [
+                "A tarde é o momento perfeito para recarregar as energias.",
+                "Aproveite cada instante desta tarde maravilhosa.",
+                "Que sua tarde seja tão brilhante quanto o sol."
+            ];
+        } else if (hora >= 18 && hora < 21) {
+            imgFundo = 'imagens/noite.jpg';
+            mensagem = "Boa noite! 💤";
+            frases = [
+                "A noite é para sonhar e planejar o amanhã.",
+                "Que sua noite seja tranquila e revigorante.",
+                "Durma com sonhos e acorde com conquistas."
+            ];
+        } else {
+            imgFundo = 'imagens/madrugada.jpg';
+            mensagem = "Vai dormir vc é corno não morcego!";
+            frases = [
+                "A madrugada é o momento de reflexão e paz.",
+                "Que a serenidade da noite te envolva.",
+                "Aproveite a calma da madrugada para sonhar."
+            ];
+        }
+        document.body.style.backgroundImage = "url('" + imgFundo + "')";;
+        document.getElementById("Titulo").innerText = mensagem;
+        document.getElementById("data").innerText = "🗓️ " + dataFormatada;
+        document.getElementById("hora").innerText = "⏳" + hora + ":" + minutos + ":" + segundos;
+
+    }
+    let frases = [];
+    function trocarFrase() {
+        if (frases.length > 0) {
+            const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
+            document.getElementById("frase").innerText = fraseAleatoria;
+        }
+    }
+    function relogio() {
+        setInterval(mudarCor, 1000);
+    }
+    trocarFrase();
+    setInterval(trocarFrase, 6000);
+    relogio();
+
+if("ServiceWorker" in navigator){
+    navigator.ServiceWorker.register("service-worker.json")
+        .then(() => console.log("Service Worker regidtrado"))
+        .catch(err => console.log("Erro no SW", err))
+}
+</script>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        /*Ocupa toda a altura da tela*/
+        display: flex;
+        /*ativa flexbox*/
+        justify-content: center;
+        /*centraliza verticalmente*/
+        align-items: center;
+        /*centraliza horizontalmente*/
+        font-family: cursive;
+        background-size: cover;
+        /*imagem ocupa toda a tela*/
+        background-position: center;
+        background-repeat: no-repeat;
+        /*impede a repetição da imagem*/
+    }
+
+    .container {
+        background-color: rgba(221, 219, 210, 0.8);
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+        max-width: 400px;
+        border-radius: 10px;
+
+    }
+
+    @media (max-width: 400px) {
+        h1 {
+            font-size: 22px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        .container {
+            width: 70%;
+        }
+    }
+</style>
+
+</html>
