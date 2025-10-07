@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrInt - Em Construção</title>
+    <style>
+        /* Centralizo tudo no centro da tela */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Logo */
+        img {
+            width: 140px;
+            margin-bottom: 20px;
+        }
+
+        /* Título principal */
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        /* Texto */
+        p {
+            max-width: 600px;
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        strong {
+            color: #62B28D;
+        }
+
+        /* Botão de voltar */
+        button {
+            background-color: #62B28D;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #4b9373;
+        }
+
+        /* Link para o GitHub */
+        a {
+            margin-top: 15px;
+            color: #333333;
+            text-decoration: none;
+            font-size: 16px;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Logo -->
+    <img src="img/logo.png" alt="Logo PrInt">
+
+    <!-- Mensagem principal -->
+    <h1>Estamos trabalhando nisso 🏗️</h1>
+
+    <!-- Texto principal -->
+    <p>
+        O <strong>PrInt</strong> ainda está em desenvolvimento, mas logo você vai poder testar a
+        plataforma que vai <strong>revolucionar</strong> o cuidado com a saúde através da tecnologia.
+    </p>
+
+    <p>
+        Retorne em breve e acompanhe nossa evolução.
+        O futuro da saúde no Brasil já começou — e nós estamos fazendo parte disso. 💚
+    </p>
+
+    <p><em>“Inteligência que cuida, tecnologia que salva.”</em></p>
+
+    <!-- Botão -->
+    <button onclick="voltar()">Voltar</button>
+
+    <!-- Link para o GitHub -->
+    <a href="https://github.com/jota-araujo/Print" target="_blank">Contribua com o projeto</a>
+
+    <script>
+        // Função pra voltar pra tela inicial
+        function voltar() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+
+</html>
