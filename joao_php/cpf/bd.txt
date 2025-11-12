@@ -1,0 +1,6 @@
+create database sistemas;
+use sistemas;
+create table cliente (
+cpf varchar(11) primary key, 
+data_envio timestamp default current_timestamp
+);
