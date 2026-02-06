@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Fundo de Quintal</title>
+
+    <style>
+        /* ===== RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== MAIN ===== */
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            margin-bottom: 10px;
+        }
+
+        hr {
+            margin-bottom: 15px;
+        }
+
+        /* ===== DISCOGRAFIA ===== */
+        #discografia h3 {
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+.disco {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.capa img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    background: #f0f0f0;
+}
+
+
+        .info h4 {
+            margin-bottom: 5px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Fundo de Quintal</h1>
+        <nav>
+            <ul>
+                <li><a href="#grupo">O Grupo</a></li>
+                <li><a href="#historia">História</a></li>
+                <li><a href="#discografia">Discografia</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="grupo">
+            <h2>O Grupo</h2>
+            <hr>
+            <p>
+                Fundo de Quintal é um grupo de samba brasileiro formado no Rio de Janeiro
+                na década de 1970, surgido a partir das rodas de samba do Cacique de Ramos.
+                O grupo é considerado uma das maiores referências do samba e do pagode,
+                sendo responsável por grandes inovações musicais no gênero.
+            </p>
+        </section>
+
+        <section id="historia">
+            <h2>História</h2>
+            <hr>
+            <p>
+                O Fundo de Quintal ganhou reconhecimento nacional após Beth Carvalho
+                levar integrantes do grupo para seus discos no fim dos anos 1970.
+                Durante os anos 1980, o grupo viveu seu auge, lançando álbuns
+                históricos que ajudaram a consolidar o pagode como vertente do samba.
+            </p>
+            <p>
+                Mesmo com mudanças na formação ao longo dos anos, o grupo segue ativo
+                e respeitado, sendo considerado um dos mais influentes da música
+                popular brasileira.
+            </p>
+        </section>
+
+<section id="discografia">
+    <h2>Discografia</h2>
+    <hr>
+
+<h3>Álbuns de Estúdio</h3>
+
+<article class="disco">
+    <div class="capa">
+        <img src="https://i.discogs.com/zyYUEW8M8S6PFl7_9CbnzA41JrlTMex5zC1eLH2vzyc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTUyMDI0/MDQtMTM4NzMxOTc3/OC0xNzIwLmpwZWc.jpeg" alt="Samba é No Fundo de Quintal">
+    </div>
+    <div class="info"><h4>Samba é No Fundo de Quintal</h4><p>Ano: 1980</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa">
+        <img src="https://i.discogs.com/Kw-w1uA4ImUJTproEzNB6TEjb3fsDKi-I1e5p7jqVj8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgwMzI2/NzgtMTQ4NTYzODE2/NC00NzY0LmpwZWc.jpeg" alt="Samba é No Fundo de Quintal Vol. 2">
+    </div>
+    <div class="info"><h4>Samba é No Fundo de Quintal Vol. 2</h4><p>Ano: 1981</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa">
+        <img src="https://i.discogs.com/-kCLULEGxtB4D9m2esi2kQRD0kRCzueWHPGPJR0UtV4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc2MDQ0/MDUtMTQ0NDk3NTky/MC05ODEwLmpwZWc.jpeg" alt="Nos Pagodes da Vida">
+    </div>
+    <div class="info"><h4>Nos Pagodes da Vida</h4><p>Ano: 1983</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa">
+        <img src="https://i.discogs.com/PqoleSs3dDSdr7J4X4NX5vjt-mBxCepjZ23pcjeMyno/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg3OTc2/NzAtMTUyODA1ODA4/Ny01NTI5LmpwZWc.jpeg" alt="Seja Sambista Também">
+    </div>
+    <div class="info"><h4>Seja Sambista Também</h4><p>Ano: 1984</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa">
+        <img src="https://i.discogs.com/KdYer1-dI9eicluVW61R7RDuy1uK49cCV8lrwZoMiCQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU2ODEx/MTktMTYwNjQ0MDE5/NC03MzM4LmpwZWc.jpeg" alt="Divina Luz">
+    </div>
+    <div class="info"><h4>Divina Luz</h4><p>Ano: 1985</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa">
+        <img src="" alt="O Mapa da Mina">
+    </div>
+    <div class="info"><h4>O Mapa da Mina</h4><p>Ano: 1986</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa">
+        <img src="" alt="Do Fundo do Nosso Quintal">
+    </div>
+    <div class="info"><h4>Do Fundo do Nosso Quintal</h4><p>Ano: 1987</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa">
+        <img src="" alt="O Show Tem Que Continuar">
+    </div>
+    <div class="info"><h4>O Show Tem Que Continuar</h4><p>Ano: 1988</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa">
+        <img src="" alt="Ciranda do Povo">
+    </div>
+    <div class="info"><h4>Ciranda do Povo</h4><p>Ano: 1989</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa">
+        <img src="" alt="É Aí Que Quebra a Rocha">
+    </div>
+    <div class="info"><h4>É Aí Que Quebra a Rocha</h4><p>Ano: 1991</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa">
+        <img src="" alt="A Batucada dos Nossos Tantãs">
+    </div>
+    <div class="info"><h4>A Batucada dos Nossos Tantãs</h4><p>Ano: 1993</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa">
+        <img src="" alt="Carta Musicada">
+    </div>
+    <div class="info"><h4>Carta Musicada</h4><p>Ano: 1994</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa">
+        <img src="" alt="Palco Iluminado">
+    </div>
+    <div class="info"><h4>Palco Iluminado</h4><p>Ano: 1995</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa">
+        <img src="" alt="Nas Ondas do Partido">
+    </div>
+    <div class="info"><h4>Nas Ondas do Partido</h4><p>Ano: 1996</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa">
+        <img src="" alt="Livre Pra Sonhar">
+    </div>
+    <div class="info"><h4>Livre Pra Sonhar</h4><p>Ano: 1997</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa">
+        <img src="" alt="Fundo de Quintal e Convidados">
+    </div>
+    <div class="info"><h4>Fundo de Quintal e Convidados</h4><p>Ano: 1998</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa">
+        <img src="" alt="Chega Pra Sambar">
+    </div>
+    <div class="info"><h4>Chega Pra Sambar</h4><p>Ano: 1999</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa">
+        <img src="" alt="Papo de Samba">
+    </div>
+    <div class="info"><h4>Papo de Samba</h4><p>Ano: 2001</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa">
+        <img src="" alt="Festa Pra Comunidade">
+    </div>
+    <div class="info"><h4>Festa Pra Comunidade</h4><p>Ano: 2003</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa">
+        <img src="" alt="Pela Hora">
+    </div>
+    <div class="info"><h4>Pela Hora</h4><p>Ano: 2006</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa">
+        <img src="" alt="Nossa Verdade">
+    </div>
+    <div class="info"><h4>Nossa Verdade</h4><p>Ano: 2011</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa">
+        <img src="" alt="Só Felicidade">
+    </div>
+    <div class="info"><h4>Só Felicidade</h4><p>Ano: 2014</p></div>
+</article>
+
+<h3>Álbuns ao Vivo</h3>
+
+<article class="disco">
+    <div class="capa"><img src="" alt="Ao Vivo"></div>
+    <div class="info"><h4>Ao Vivo</h4><p>Ano: 1990</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa"><img src="" alt="Simplicidade"></div>
+    <div class="info"><h4>Simplicidade</h4><p>Ano: 2000</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa"><img src="" alt="Gravado no Cacique de Ramos"></div>
+    <div class="info"><h4>Gravado no Cacique de Ramos</h4><p>Ano: 2002</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa"><img src="" alt="Ao Vivo Convida"></div>
+    <div class="info"><h4>Ao Vivo Convida</h4><p>Ano: 2004</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa"><img src="" alt="O Quintal do Samba"></div>
+    <div class="info"><h4>O Quintal do Samba</h4><p>Ano: 2007</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa"><img src="" alt="Samba de Todos os Tempos"></div>
+    <div class="info"><h4>Samba de Todos os Tempos</h4><p>Ano: 2008</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa"><img src="" alt="Vou Festejar"></div>
+    <div class="info"><h4>Vou Festejar</h4><p>Ano: 2009</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa"><img src="" alt="No Compasso do Samba"></div>
+    <div class="info"><h4>No Compasso do Samba</h4><p>Ano: 2012</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa"><img src="" alt="40 Anos – Circo Voador"></div>
+    <div class="info"><h4>40 Anos – Circo Voador</h4><p>Ano: 2015</p></div>
+</article>
+
+<article class="disco">
+    <div class="capa"><img src="" alt="Roda de Samba no Cacique"></div>
+    <div class="info"><h4>Roda de Samba no Cacique</h4><p>Ano: 2017</p></div>
+</article>
+
+<h3>Coletâneas</h3>
+
+<article class="disco">
+    <div class="capa">
+        <img src="" alt="Nosso Grito">
+    </div>
+    <div class="info"><h4>Nosso Grito</h4><p>Ano: 2000</p></div>
+</article>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Fundo de Quintal | Site educacional</p>
+    </footer>
+
+</body>
+</html>
