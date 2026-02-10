@@ -1,0 +1,111 @@
+
+        /* RESET SIMPLES */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* MAIN */
+        main {
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+
+        section h2 {
+            color: #003366;
+        }
+
+        /* ARTICLE */
+        article {
+            margin-top: 20px;
+        }
+
+        /* TABELA */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #003366;
+            color: white;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+.carrossel {
+    width: 400px;
+    height: 400px;
+    margin: 30px auto 10px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.carrossel img{
+    width: 100%;        
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+.carrossel img.ativa{
+    display: block;
+}
+.botoes{
+    text-align: center;
+}
+.botoes button{
+    padding: 12px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #003366;
+    color: white;
+    font-size: 16px;
+}
