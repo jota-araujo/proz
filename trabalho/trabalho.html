@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova Eletrônicos</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topo">
+    <img src="logo.png" alt="TechNova Eletrônicos">
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <main>
+        <section id="princial">
+            <div class="carrossel">
+                <img src="promocao.png" class="ativa">
+                <img src="teclado.png">
+                <img src="psp.png">
+            </div>
+            <div class="botoes">
+                <button onclick="anterior()">Anterior</button>
+                <button onclick="proximo()">Próximo</button>
+            </div>
+
+        </section>
+
+        <section id="inicio">
+            <h2>Quem Somos</h2>
+            <p>
+                A TechNova Eletrônicos é especializada na venda de celulares,
+                notebooks e acessórios tecnológicos.
+            </p>
+            <p>
+                Trabalhamos com produtos modernos, qualidade garantida
+                e preços acessíveis.
+            </p>
+        </section>
+
+        <section id="produtos">
+            <h2>Nossos Produtos</h2>
+            <p>
+                Oferecemos tecnologia para estudo, trabalho e lazer,
+                sempre acompanhando as tendências do mercado.
+            </p>
+
+            <article>
+                <h2>Catálogo de Produtos</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Descrição</th>
+                            <th>Preço</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Smartphone TechNova X10</td>
+                            <td>128GB, tela 6,5", câmera avançada</td>
+                            <td>R$ 1.899,00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Smartphone TechNova Pro Max</td>
+                            <td>256GB, alto desempenho</td>
+                            <td>R$ 2.799,00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Notebook TechNova Study 14</td>
+                            <td>8GB RAM, SSD 256GB</td>
+                            <td>R$ 3.499,00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Notebook TechNova Work 15</td>
+                            <td>16GB RAM, SSD 512GB</td>
+                            <td>R$ 4.299,00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Fone Bluetooth TechNova Sound</td>
+                            <td>Sem fio, som de qualidade</td>
+                            <td>R$ 199,00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Carregador TechNova Turbo</td>
+                            <td>Carregamento rápido</td>
+                            <td>R$ 89,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>
+                Entre em contato para mais informações.
+            </p>
+            <p>
+                Email: contato@technova.com <br>
+                Telefone: (00)9999-9999
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - TechNova Eletrônicos</p>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

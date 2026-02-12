@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="formstyle.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro</h1>
+        <br>
+<form onsubmit="alert('Dados salvos com sucesso!')">
+
+    <label>Nome:</label><br>
+    <input type="text" name="nome" required>
+
+    <label>Data de Nascimento:</label><br>
+    <input type="date" name="nascimento" min="1925-01-01" max="2016-12-31" required>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required>
+
+    <label>Senha:</label><br>
+    <input type="password" name="senha" required>
+
+    <label>Gênero:</label><br>
+    <input type="radio" name="gen" value="Masculino" required> Masculino
+    <input type="radio" name="gen" value="Feminino"> Feminino
+    <input type="radio" name="gen" value="Outro"> Outro
+
+    <label>Curso:</label><br>
+    <select name="curso" required>
+        <option value="">Selecione</option>
+        <option value="in">Informática</option>
+        <option value="rd">Redes</option>
+        <option value="ds">Desenvolvimento de Sistemas</option>
+    </select>
+
+    <br><br>
+    <button type="submit">Enviar</button>
+
+</form>
+
+
+    </div>
+</body>
+</html>
