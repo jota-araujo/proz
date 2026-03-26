@@ -1,0 +1,101 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #1f2937;
+  padding-top: 76px;
+}
+
+.banner {
+  min-height: 90vh;
+  background: linear-gradient(rgba(10, 15, 25, 0.65), rgba(10, 15, 25, 0.65)),
+    url("../images/banner.jpeg") center/cover no-repeat;
+}
+
+.servico-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.frota-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.frota-box {
+  transition: 0.3s ease;
+}
+
+.frota-box:hover {
+  transform: translateY(-6px);
+}
+
+.card,
+.frota-box,
+.diferencial-box,
+.contato-box {
+  transition: 0.3s ease;
+}
+
+.card:hover,
+.frota-box:hover,
+.diferencial-box:hover,
+.contato-box:hover {
+  transform: translateY(-6px);
+}
+
+.diferencial-icon {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.contato-rapido {
+  background: linear-gradient(135deg, #025514, #1f2937);
+}
+
+.contato-box {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(32, 31, 31, 0.12);
+}
+
+footer p {
+  color: #d1d5db;
+}
+
+@media (max-width: 991px) {
+  .banner {
+    min-height: auto;
+    padding: 100px 0 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner h1 {
+    font-size: 2rem;
+  }
+
+  .banner p {
+    font-size: 1rem;
+  }
+}
+.bg-blue-800 {
+  background-color: #020c36;
+}
+
+.frota-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 60%;
+}
